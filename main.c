@@ -54,7 +54,7 @@ int main()
         {
             char winner = checkWinner(tab);
             printf("Partie terminée !\n");
-            if (winner != 'n')
+            if (winner != ' ')
                 printf("Le joueur %c a gagné!\n", winner);
             else
                 printf("Match nul!\n");
@@ -62,6 +62,17 @@ int main()
         }
 
         sleep(1);
+
+        int cases_vides = 0; // vérification des cases vides pour ne pas avoir de boucle infinie en cas de match nul
+        for (int a = 0; a < 3; a++)
+            for (int b = 0; b < 3; b++)
+                if (tab[a][b] == ' ')
+                    cases_vides++;
+        if (cases_vides == 0)
+        {
+            printf("Match nul!\n");
+            break;
+        }
 
         int ligneIA, colonneIA;
         do 
@@ -81,7 +92,7 @@ int main()
         {
             char winner = checkWinner(tab);
             printf("Partie terminée !\n");
-            if (winner != 'n')
+            if (winner != ' ')
                 printf("Le joueur %c a gagné!\n", winner);
             else
                 printf("Match nul!\n");

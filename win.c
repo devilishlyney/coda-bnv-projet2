@@ -30,5 +30,5 @@ char checkWinner(char tab[3][3])
     {
         return tab[0][2];
     }
-    return 'n'; // Pas de gagnant
+    return ' '; // Pas de gagnant
 }
