@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include "tic-tac-toe.h"
 
-void inittab(char tab[2][2])
+void inittab(char tab[3][3])
 {
     for(int i = 0; i < 3; i++)
     {

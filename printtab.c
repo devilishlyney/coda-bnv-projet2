@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include "tic-tac-toe.h"
 
-void printtab(char tab[2][2])
+void printtab(char tab[3][3])
 {
     // de https://www.geeksforgeeks.org/c/tic-tac-toe-game-in-c/ juste pour la mise en forme du tableau
     printf("\n\n");
